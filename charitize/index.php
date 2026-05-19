@@ -188,7 +188,7 @@
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
                         </button>
-                        <h3 class="ms-5 mb-0">ShinjoCloud: Together, we can build a world where everyone has the chance to thrive.
+                        <h3 class="ms-5 mb-0">
                         </h3>
                     </div>
                 </div>
