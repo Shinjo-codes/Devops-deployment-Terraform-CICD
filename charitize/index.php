@@ -188,7 +188,7 @@
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
                         </button>
-                        <h3 class="ms-5 mb-0">
+                        <h3 class="ms-5 mb-0">ShinjoCloud: Empowering Communities for a Better Tomorrow
                         </h3>
                     </div>
                 </div>
