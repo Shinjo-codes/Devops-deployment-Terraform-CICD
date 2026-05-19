@@ -188,13 +188,13 @@
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
                         </button>
-                        <h3 class="ms-5 mb-0">Together, we can build a world where everyone has the chance to thrive.
+                        <h3 class="ms-5 mb-0">ShinjoCloud: Together, we can build a world where everyone has the chance to thrive.
                         </h3>
                     </div>
                 </div>
                 <div class="d-none d-lg-block col-lg-1">
                     <div class="h-100 w-100 bg-secondary d-flex align-items-center justify-content-center">
-                        <span class="text-white" style="transform: rotate(-90deg);">Scroll Down</span>
+                        <span class="text-white" style="transform: rotate(-90deg);">ShinjoCloud Down</span>
                     </div>
                 </div>
             </div>
