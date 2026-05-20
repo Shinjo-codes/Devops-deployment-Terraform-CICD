@@ -32,4 +32,4 @@ jobs:
             sudo docker stop php-app || true
             sudo docker rm php-app || true
 
-            sudo docker run -d -p 80:80 --name php-app php-app
+            sudo docker run -d -p 3000:80 --name php-app php-app
