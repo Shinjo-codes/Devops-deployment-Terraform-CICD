@@ -103,7 +103,8 @@ devops-deployment-Terraform-CICD/
 │   ├── img/
 │   ├── js/
 │   └── ...
-│
+│── screenshots/
+
 ├── terra4m/
 │   └── main.tf                 # Infrastructure as Code
 │
