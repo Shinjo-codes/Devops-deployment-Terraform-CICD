@@ -162,7 +162,7 @@ EXPOSE 80
 | `COPY . /var/www/html` | Copies all PHP files from host to container |
 | `EXPOSE 80` | Opens port 80 for HTTP traffic |
 
-> 📸 **!(screenshots/03-dockerfile-vscode.png): [VS Code Explorer showing the Dockerfile inside the charitize folder, with Dockerfile content visible]**
+> 📸 ![VS Code Explorer showing the Dockerfile inside the charitize folder, with Dockerfile content visible](screenshots/03-dockerfile-vscode.png)
 
 ---
 
@@ -200,7 +200,7 @@ git branch -M main
 git push -u origin main
 ```
 
-> 📸 **!(screenshots/04-github-new-repo.png)[INSERT SCREENSHOT: Terminal showing successful git push output with "branch 'main' set up to track 'origin/main'"]**
+> 📸 ![Terminal showing successful git push output with "branch 'main' set up to track 'origin/main'"](screenshots/04-github-new-repo.png)
 
 ---
 
@@ -400,7 +400,7 @@ output "public_ip_address" {
 | `azurerm_network_interface` | Network adapter connecting VM to VNet |
 | `azurerm_linux_virtual_machine` | Ubuntu 22.04 VM with Docker pre-installed |
 
-> 📸 **!(screenshots/06-terraform-main-tf.png)[INSERT SCREENSHOT: VS Code showing the terraform/main.tf file with syntax highlighting]**
+> 📸 ![VS Code showing the terraform/main.tf file with syntax highlighting](screenshots/06-terraform-main-tf.png)
 
 ### 4.3 Deploy Infrastructure
 
@@ -418,7 +418,7 @@ terraform apply
 
 # Note the Public IP output — you'll need it for DNS and GitHub Secrets
 ```
-📸 **!(screenshots/07-terraform-main-tf.png)[INSERT SCREENSHOT: VS Code showing the terraform/main.tf terminal file with syntax highlighting]**
+📸 ![VS Code showing the terraform/main.tf terminal file with syntax highlighting](screenshots/07-terraform-main-tf.png)
 
 ---
 
@@ -487,7 +487,7 @@ jobs:
 | **Stop/Remove** | `docker stop/rm` | Gracefully replaces old container |
 | **Run** | `docker run -d -p 3000:80` | Starts container on port 3000 |
 
-> 📸 **!(screenshots/08-github-secrets-vm-host.png)[INSERT SCREENSHOT: VS Code showing the .github/workflows/deploy.yml file]**
+> 📸 ![VS Code showing the .github/workflows/deploy.yml file](screenshots/08-github-secrets-vm-host.png)
 
 ### 5.3 Configure GitHub Secrets
 
@@ -503,7 +503,7 @@ Add these three secrets:
 | `VM_USER` | `azureuser` | The admin username set in Terraform |
 | `SSH_PRIVATE_KEY` | Contents of `~/.ssh/azure_key` | Run `cat ~/.ssh/azure_key` and copy the entire output |
 
-> 📸 **!(screenshots/10-github-secrets-ssh-key.png)[INSERT SCREENSHOT: Terminal showing `cat ~/.ssh/azure_key` output and GitHub Secrets page showing SSH_PRIVATE_KEY being added]**
+> 📸 ![Terminal showing `cat ~/.ssh/azure_key` output and GitHub Secrets page showing SSH_PRIVATE_KEY being added](screenshots/10-github-secrets-ssh-key.png)
 
 > ⚠️ **Critical:** Paste the **PRIVATE KEY** (starts with `-----BEGIN OPENSSH PRIVATE KEY-----`), NOT the public key!
 
@@ -518,7 +518,7 @@ Before relying on CI/CD, manually verify the VM and deployment work.
 ```bash
 ssh azureuser@<YOUR_VM_PUBLIC_IP>
 ```
-> 📸 **!(screenshots/11-ssh-vm.png)[INSERT SCREENSHOT: Terminal showing `ssh azureuser@<Your_VM_Public_IP>` output ]**
+> 📸 ![Terminal showing `ssh azureuser@<Your_VM_Public_IP>` output ](screenshots/11-ssh-vm.png)
 
 ### 6.2 Clone and Deploy Manually
 
@@ -544,7 +544,7 @@ http://<YOUR_VM_PUBLIC_IP>
 
 You should see the Charitize PHP application running.
 
-> 📸 **!(screenshots/11-manual-deploy-browser.png)[INSERT SCREENSHOT: Browser showing the Charitize website loaded via VM Public IP]**
+> 📸 ![Browser showing the Charitize website loaded via VM Public IP](screenshots/11-manual-deploy-browser.png)
 
 ---
 
@@ -563,7 +563,7 @@ In your domain registrar's DNS management panel:
 
 Example: `app.yourdomain.com` → `20.61.185.188`
 
-> 📸 **!(screenshots/12-dns-a-record.png)[INSERT SCREENSHOT: DNS management panel showing A record configuration with Host: app, Type: A, Value: VM Public IP]**
+> 📸 ![DNS management panel showing A record configuration with Host: app, Type: A, Value: VM Public IP](screenshots/12-dns-a-record.png)
 
 ### 7.2 DNS Propagation
 
@@ -602,7 +602,7 @@ Follow the prompts:
 
 Visit `https://app.yourdomain.com` — you should see a secure lock icon 🔒
 
-> 📸 **!(screenshots/16-final-https-site.png)[INSERT SCREENSHOT: Browser showing the Charitize website with HTTPS lock icon in the address bar]**
+> 📸 ![Browser showing the Charitize website with HTTPS lock icon in the address bar](screenshots/16-final-https-site.png)
 
 
 ### 8.4 Auto-Renewal
@@ -679,7 +679,7 @@ In Azure Portal, add an inbound security rule:
 | Priority | 1013 |
 | Name | AllowDocker |
 
-> 📸 **!(screenshots/15-azure-nsg-port-3000.png)[INSERT SCREENSHOT: Azure Portal NSG inbound security rules showing AllowDocker rule for port 3000]**
+> 📸 ![Azure Portal NSG inbound security rules showing AllowDocker rule for port 3000](screenshots/15-azure-nsg-port-3000.png)
 
 ### 9.5 Verify End-to-End
 
@@ -689,7 +689,7 @@ Visit `https://app.yourdomain.com` — the flow is now:
 User → HTTPS (443) → Nginx (80) → Proxy Pass → Docker (3000) → PHP App
 ```
 
-> 📸 **!(screenshots/16-final-https-site.png)[INSERT SCREENSHOT: Browser showing the fully functional Charitize website via HTTPS custom domain]**
+> 📸 ![INSERT SCREENSHOT: Browser showing the fully functional Charitize website via HTTPS custom domain](screenshots/16-final-https-site.png)
 
 ---
 
@@ -731,7 +731,7 @@ Thumbs.db
 - **Wrong:** `ssh-rsa AAAAB3...` (public key, one line)
 - **Right:** `-----BEGIN OPENSSH PRIVATE KEY-----` (private key, multiple lines)
 
-> 📸 **!(screenshots/20-permission-denied-log.png)[INSERT SCREENSHOT: GitHub Actions error log showing "can't connect without a private SSH key or password"]**
+> 📸 ![GitHub Actions error log showing "can't connect without a private SSH key or password"](screenshots/20-permission-denied-log.png)
 
 Run this to get the correct private key:
 ```bash
@@ -760,7 +760,7 @@ script: |
 ```
 
 
-> 📸 **!(screenshots/21-successful-deploy-log.png)[INSERT SCREENSHOT: GitHub Actions log showing successful deployment after fix]**
+> 📸 ![GitHub Actions log showing successful deployment after fix](screenshots/21-successful-deploy-log.png)
 
 ---
 
@@ -792,7 +792,7 @@ az group delete -n rg-php-devops -y
 az group delete -n NetworkWatcherRG -y
 ```
 
-> 📸 **!(screenshots/terraform-destroy.png)[INSERT SCREENSHOT: Terminal showing `terraform destroy` or `az group delete` command execution]**
+> 📸 ![Terminal showing `terraform destroy` or `az group delete` command execution](screenshots/terraform-destroy)
 
 ---
 
