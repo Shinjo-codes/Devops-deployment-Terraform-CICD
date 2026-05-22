@@ -822,16 +822,16 @@ az group delete -n NetworkWatcherRG -y
 
 ## 👨‍💻 Author: Shina Ojo
 
-**DevOps Engineer / Tutor**
+**DevOps Engineer**
 
-> 🎓 *This project was completed as part of a hands-on DevOps bootcamp, demonstrating real-world deployment patterns used in production environments.*
+> 🎓 *This project was completed as part of a hands-on DevOps experience at Orchestra Business Solutions, demonstrating real-world deployment patterns used in production environments.*
 
 ---
 
 ## 📄 License
 
-This project is for educational and documentation purposes. The Charitize template is used as a sample PHP application for demonstration.
+This project is for production experience and documentation purposes. The Charitize template is used as a sample PHP application for demonstration.
 
 ---
 
-*⭐ If you found this guide helpful, consider starring the repository and sharing it with others learning DevOps!*
+*⭐ If you found this guide helpful, consider starring the repository!*
